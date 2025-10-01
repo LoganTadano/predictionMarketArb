@@ -13,7 +13,7 @@ def main():
 
 def fetch_JSON(url):
     try:
-        querystring = {"limit":"1"}
+        querystring = {"limit":"10"}
         response = requests.get(url, params=querystring)
         response.raise_for_status()  # Raise an exception for bad status codes (4xx or 5xx)
 
@@ -27,6 +27,9 @@ def fetch_JSON(url):
     except json.JSONDecodeError as e:
         print(f"Error decoding JSON: {e}")
         return None
+    
+
+
 
 
 
