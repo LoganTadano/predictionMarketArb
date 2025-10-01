@@ -19,12 +19,16 @@ def fetch_data():
             'title': market['title'],
             'status': market['status'],
             'volume': market['volume'],
-            'rules_primary': market['rules_primary']
+            'rules_primary': market['rules_primary'],
+            'expiration_time': market['expiration_time'],
+            'tick_size': market['tick_size']
 
         }
         for market in markets
     ]
     return filtered_data
+
+
     
 if __name__ == "__main__":
     data = fetch_data()
